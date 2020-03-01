@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__item {
+    width: 33.3333%;
+    position: relative;
+    font-size: 18px;
+    transform: translateX(16px);
+
+    &:nth-of-type(n + 4) {
+      margin-top: 15px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 4px;
+      height: 4px;
+      left: -8px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: #333;
+    }
+  }
+}
