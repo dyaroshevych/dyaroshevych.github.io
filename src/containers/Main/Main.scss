@@ -4,11 +4,20 @@
   margin-bottom: 20px;
   margin-top: calc(100vh - 100px);
 
+  & .section {
+    padding: 50px;
+  }
+
   &__container {
     display: flex;
     background-color: #fff;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+  }
+
+  &__info-container,
+  &__projects-container {
+    width: 50%;
   }
 
   &__info-container {
@@ -17,8 +26,6 @@
     max-width: fit-content;
 
     & .section {
-      padding: 40px 50px;
-
       &:first-of-type {
         border-top-left-radius: 7px;
       }
@@ -44,11 +51,9 @@
   &__projects {
     &-container {
       position: relative;
-      min-width: 50%;
       border-top-right-radius: 7px;
       border-bottom-right-radius: 7px;
       background-color: #fff;
-      min-height: 1000px;
     }
 
     &-heading {
@@ -63,6 +68,14 @@
       font-weight: 700;
       font-size: 20px;
       color: #fff;
+    }
+  }
+}
+
+.contact {
+  &__form {
+    .button {
+      margin-top: 40px;
     }
   }
 }

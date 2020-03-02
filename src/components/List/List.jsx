@@ -5,7 +5,7 @@ import "./List.scss";
 const List = ({ items }) => (
   <ul className="list">
     {items.map((item, idx) => (
-      <li className="list__item" key={`${item}__idx`}>
+      <li className="list__item" key={idx}>
         {item}
       </li>
     ))}

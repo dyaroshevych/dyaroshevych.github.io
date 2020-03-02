@@ -1,27 +1,17 @@
 import React from "react";
+import { skills, projects, contact } from "../../data.json";
 
 import List from "../../components/List/List";
+import Project from "../../components/Project/Project";
+import Field from "../../components/Field/Field";
+import Button from "../../components/Button/Button";
 
 import "./Main.scss";
 
-const skills = [
-  "HTML5",
-  "CSS3",
-  "Javascript",
-  "React.js",
-  "SASS/SCSS",
-  "Bootstrap 4",
-  "Git",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "MySQL",
-  "jQuery"
-];
 const sections = [
   {
     name: "about",
-    heading: "About Me",
+    heading: "About me",
     Content: (
       <>
         <p className="paragraph">
@@ -35,10 +25,33 @@ const sections = [
   },
   {
     name: "skills",
-    heading: "My Skills",
+    heading: "My skills",
     Content: (
       <>
         <List items={skills} />
+      </>
+    )
+  },
+  {
+    name: "contact",
+    heading: "Contact me",
+    Content: (
+      <>
+        <form className="contact__form">
+          {contact.map(
+            ({ name, type, placeholder, isRequired, maxChars }, idx) => (
+              <Field
+                key={idx}
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                isRequired={isRequired}
+                maxChars={maxChars}
+              />
+            )
+          )}
+          <Button color="white" shape="square" text="Submit" />
+        </form>
       </>
     )
   }
@@ -62,6 +75,9 @@ const Main = () => (
       </div>
       <div className="main__projects-container">
         <div className="main__projects-heading">Latest Projects</div>
+        {projects.map((project, idx) => (
+          <Project info={project} key={idx} />
+        ))}
       </div>
     </div>
   </main>

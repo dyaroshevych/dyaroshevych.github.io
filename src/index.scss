@@ -10,6 +10,16 @@ body {
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f46c3b;
+}
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: #333;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 a {
   text-decoration: none;
 }
@@ -42,7 +52,7 @@ ul {
 .heading-secondary {
   font-weight: 700;
   font-size: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .paragraph {

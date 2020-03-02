@@ -2,9 +2,13 @@ import React from "react";
 
 import "./Button.scss";
 
-const Button = ({ color, shape, text }) => (
-  <button className={`button${color ? ` button--${color}` : ""}`}>
-    Let's work together
+const Button = ({ color = "white", shape = "round", text }) => (
+  <button
+    className={`button${color ? ` button--${color}` : ""}${
+      shape ? ` button--${shape}` : ""
+    }`}
+  >
+    {text}
   </button>
 );
 

@@ -1,20 +1,29 @@
 .button {
   $self: &;
   cursor: pointer;
-  font-size: 25px;
   transition: all 0.25s ease;
 
   &:focus {
     outline: none;
   }
 
+  &--square {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  &--round {
+    font-size: 25px;
+    padding: 8.6px 20px;
+    border-radius: 500px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  }
+
   &--white {
     background-color: transparent;
     border: 2px solid #fff;
-    padding: 8.6px 20px;
-    border-radius: 500px;
     color: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
       background-color: #fff;
