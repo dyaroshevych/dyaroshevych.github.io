@@ -1,5 +1,5 @@
 import React from "react";
-import { skills, projects, contact } from "../../data.json";
+import { skills, projects, contact } from "../../data";
 
 import List from "../../components/List/List";
 import Project from "../../components/Project/Project";
@@ -76,7 +76,7 @@ const Main = () => (
       <div className="main__projects-container">
         <div className="main__projects-heading">Latest Projects</div>
         {projects.map((project, idx) => (
-          <Project info={project} key={idx} />
+          <Project {...project} key={idx} />
         ))}
       </div>
     </div>

@@ -1,0 +1,51 @@
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s ease;
+  margin: 20px;
+  border-radius: 7px;
+
+  &:hover {
+    background-size: 130%;
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__info {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__skills {
+    &-list {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    &-item {
+      font-weight: 700;
+      font-size: 12px;
+      color: #a8a8a8;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -11,14 +11,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
   background-color: #f46c3b;
 }
 ::-webkit-scrollbar-thumb {
   width: 7px;
   background-color: #333;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 a {
   text-decoration: none;
@@ -52,7 +52,19 @@ ul {
 .heading-secondary {
   font-weight: 700;
   font-size: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 24px;
+  color: #ff895d;
+}
+
+.subheading-tertiary {
+  font-weight: 400;
+  font-size: 16px;
+  color: #a8a8a8;
 }
 
 .paragraph {
