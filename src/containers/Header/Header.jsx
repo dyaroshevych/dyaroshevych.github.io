@@ -1,11 +1,10 @@
 import React from "react";
-import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 
 import "./Header.scss";
 
 import { ReactComponent as Logo } from "../../assets/img/logo.svg";
-import IconLink from "../../components/IconLink/IconLink";
-import Button from "../../components/Button/Button";
+import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
+import { Button, IconLink } from "../../components";
 
 const Header = () => {
   const links = [

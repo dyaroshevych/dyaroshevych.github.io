@@ -1,6 +1,5 @@
 .button {
   $self: &;
-  cursor: pointer;
   transition: all 0.25s ease;
 
   &:focus {

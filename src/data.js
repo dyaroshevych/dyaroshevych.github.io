@@ -18,23 +18,30 @@ export const skills = [
 ];
 export const projects = [
   {
+    name: "Mathew's Realty",
+    type: "real estate website",
+    techStack: [0, 1, 2],
+    repo: "https://github.com/dyaroshevych/mathews-realty",
+    link: "https://dyaroshevych.github.io/mathews-realty",
+    description: "",
+    image: project3
+  },
+  {
+    name: "Orbital View",
+    type: "company website",
+    techStack: [0, 1, 2],
+    repo: "https://github.com/dyaroshevych/orbital-view",
+    link: "https://orbitalview.ai",
+    description: "",
+    image: project2
+  },
+
+  {
     name: "A-A-Agency",
     type: "agency website",
     techStack: [0, 1, 2],
     description: "",
     image: project1
-  },
-  {
-    name: "Orbital View",
-    techStack: [0, 1, 2],
-    description: "",
-    image: project2
-  },
-  {
-    name: "Mathew's Realty",
-    techStack: [0, 1, 2],
-    description: "",
-    image: project3
   }
 ];
 export const contact = [

@@ -6,7 +6,6 @@
 
   &__container {
     display: flex;
-    border-radius: 7px;
   }
 
   &__info-container,
@@ -18,6 +17,8 @@
     display: flex;
     flex-direction: column;
     max-width: fit-content;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px 0 rgba(34, 34, 34, 0.3);
 
     & .section {
       &:first-of-type {
@@ -50,6 +51,7 @@
 
     &-heading {
       position: absolute;
+      z-index: 1;
       top: 0;
       right: 50px;
       transform: translateY(-50%);

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { skills, projects, contact } from "../../data";
 
-import List from "../../components/List/List";
-import Project from "../../components/Project/Project";
-import Field from "../../components/Field/Field";
-import Button from "../../components/Button/Button";
+import {
+  Button,
+  Field,
+  List,
+  Project,
+  ProjectDescription
+} from "../../components";
 
 import "./Main.scss";
 
@@ -57,30 +60,46 @@ const sections = [
   }
 ];
 
-const Main = () => (
-  <main className="main">
-    <div className="wrapper main__container">
-      <div className="main__info-container">
-        {sections.map(({ name, heading, Content }, idx) => (
-          <section
-            className={`section section--${
-              !(idx % 2) ? "gray" : "white"
-            } ${name}`}
-            key={idx}
-          >
-            <h2 className="heading-secondary">{heading}</h2>
-            {Content}
-          </section>
-        ))}
-      </div>
-      <div className="main__projects-container">
-        <div className="main__projects-heading">Latest Projects</div>
-        {projects.map((project, idx) => (
-          <Project {...project} key={idx} />
-        ))}
-      </div>
-    </div>
-  </main>
-);
+const Main = () => {
+  const openProjectHandler = name => {
+    const projectIdx = projects.findIndex(project => project.name === name);
+
+    setOpenedProject(projectIdx);
+  };
+
+  const [openedProject, setOpenedProject] = useState(null);
+
+  return (
+    <>
+      {openedProject !== null && <ProjectDescription />}
+      <main className="main">
+        <div className="wrapper main__container">
+          <div className="main__info-container">
+            {sections.map(({ name, heading, Content }, idx) => (
+              <section
+                className={`section section--${
+                  !(idx % 2) ? "gray" : "white"
+                } ${name}`}
+                key={idx}
+              >
+                <h2 className="heading-secondary">{heading}</h2>
+                {Content}
+              </section>
+            ))}
+          </div>
+          <div className="main__projects-container">
+            <div className="main__projects-heading">Latest Projects</div>
+            {projects.map((project, idx) => (
+              <Project
+                {...{ ...project, openProject: openProjectHandler }}
+                key={idx}
+              />
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
+  );
+};
 
 export default Main;
