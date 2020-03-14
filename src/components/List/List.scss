@@ -5,13 +5,31 @@
   width: 100%;
 
   &__item {
-    width: 33.3333%;
     position: relative;
     font-size: 18px;
-    transform: translateX(16px);
 
-    &:nth-of-type(n + 4) {
-      margin-top: 15px;
+    &-1 {
+      width: 100%;
+
+      &:nth-of-type(n + 2) {
+        margin-top: 15px;
+      }
+    }
+
+    &-2 {
+      width: 50%;
+
+      &:nth-of-type(n + 3) {
+        margin-top: 15px;
+      }
+    }
+
+    &-3 {
+      width: 33.3333%;
+
+      &:nth-of-type(n + 4) {
+        margin-top: 15px;
+      }
     }
 
     &::after {

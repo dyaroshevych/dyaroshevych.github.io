@@ -15,7 +15,7 @@
 
     &#{$self} {
       & #{$self}__icon {
-        color: #ff7c4d;
+        color: #ff7644;
       }
 
       &:hover {
@@ -31,7 +31,7 @@
         box-shadow: 0px 0px 0px 3px rgba(198, 48, 48, 0.4);
 
         & #{$self}__icon {
-          color: #ff7c4d;
+          color: #ff7644;
         }
       }
     }

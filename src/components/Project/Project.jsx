@@ -2,15 +2,14 @@ import React from "react";
 import { FaGithub, FaPlus, FaLink } from "react-icons/fa";
 
 import { skills } from "../../data";
-
 import "./Project.scss";
 
-const Project = ({ name, techStack, repo, link, image, openProject }) => (
+const Project = ({ name, techStack, repo, link, images, openProject }) => (
   <section className="section project" onClick={() => openProject(name)}>
     <div
       className="project__background"
       style={{
-        backgroundImage: `url(${image})`
+        backgroundImage: `url(${images[0].url})`
       }}
     ></div>
     <div className="project__info">
@@ -23,13 +22,23 @@ const Project = ({ name, techStack, repo, link, image, openProject }) => (
         ))}
       </ul>
       <div className="project__links">
-        <a className="project__link" href={repo} target="blank">
+        <a
+          className="project__link"
+          href={repo}
+          target="blank"
+          onClick={e => e.stopPropagation()}
+        >
           <FaGithub />
         </a>
         <button className="project__link">
           <FaPlus />
         </button>
-        <a className="project__link" href={link} target="blank">
+        <a
+          className="project__link"
+          href={link}
+          target="blank"
+          onClick={e => e.stopPropagation()}
+        >
           <FaLink />
         </a>
       </div>

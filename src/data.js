@@ -1,6 +1,8 @@
-import project1 from "./assets/img/projects/1.jpg";
-import project2 from "./assets/img/projects/2.jpg";
-import project3 from "./assets/img/projects/3.jpg";
+import project_1_1 from "./assets/img/projects/1_1.jpg";
+import project_1_2 from "./assets/img/projects/1_2.jpg";
+import project_2_1 from "./assets/img/projects/2_1.jpg";
+import project_2_2 from "./assets/img/projects/2_2.jpg";
+import project_3_1 from "./assets/img/projects/3_1.jpg";
 
 export const skills = [
   "HTML5",
@@ -19,29 +21,36 @@ export const skills = [
 export const projects = [
   {
     name: "Mathew's Realty",
-    type: "real estate website",
+    description:
+      "This is a website I created for Susan Mathews, a real estate professional and luxury home marketing specialist based in Westlake area. I was responsible for implementing all the markup, styling code and scripts. This website consists of 4 fully responsive and cross browser compatible pages.",
+    technologies: ["HTML", "CSS", "Javascript", "animate.css library"],
     techStack: [0, 1, 2],
     repo: "https://github.com/dyaroshevych/mathews-realty",
     link: "https://dyaroshevych.github.io/mathews-realty",
-    description: "",
-    image: project3
+    images: [
+      { url: project_1_1, description: "" },
+      { url: project_1_2, description: "" }
+    ]
   },
   {
     name: "Orbital View",
-    type: "company website",
+    description:
+      "This is a website I created for Orbital View, an artificial intelligence company focused on roof damage assessment. I was responsible for implementing all the markup and styling code. This website consists of 4 fully responsive and cross browser compatible pages.",
+    technologies: ["HTML", "CSS", "Javascript", "animate.css library"],
     techStack: [0, 1, 2],
     repo: "https://github.com/dyaroshevych/orbital-view",
     link: "https://orbitalview.ai",
-    description: "",
-    image: project2
+    images: [
+      { url: project_2_1, description: "" },
+      { url: project_2_2, description: "" }
+    ]
   },
 
   {
     name: "A-A-Agency",
-    type: "agency website",
     techStack: [0, 1, 2],
     description: "",
-    image: project1
+    images: [{ url: project_3_1, description: "" }]
   }
 ];
 export const contact = [

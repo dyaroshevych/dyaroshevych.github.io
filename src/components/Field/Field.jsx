@@ -7,7 +7,7 @@ const Field = ({
   type = "text",
   placeholder = "",
   isRequired = false,
-  maxChars = 255
+  maxChars = 1000
 }) => (
   <div className="field">
     {type === "textarea" ? (
@@ -16,7 +16,7 @@ const Field = ({
         name={name}
         placeholder={placeholder}
         maxLength={maxChars}
-        rows="3"
+        rows="4"
       ></textarea>
     ) : (
       <input

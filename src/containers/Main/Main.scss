@@ -3,20 +3,22 @@
   width: 100%;
   margin-bottom: 20px;
   margin-top: calc(100vh - 150px);
+  background-image: linear-gradient(rgba(255, 118, 68, 0) 0%, #ff7644 70px);
+  border-radius: 7px;
 
   &__container {
     display: flex;
+    justify-content: space-between;
   }
 
   &__info-container,
   &__projects-container {
-    width: 50%;
+    width: calc(50% - 10px);
   }
 
   &__info-container {
     display: flex;
     flex-direction: column;
-    max-width: fit-content;
     border-radius: 7px;
     box-shadow: 0 2px 5px 0 rgba(34, 34, 34, 0.3);
 
@@ -56,10 +58,10 @@
       right: 50px;
       transform: translateY(-50%);
       padding: 10px 20px;
-      background-image: linear-gradient(135deg, #f68259 0%, #f46c3b 100%);
+      background-color: #333;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 0 0px 6px rgba(0, 0, 0, 0.1);
       border-radius: 5px;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 20px;
       color: #fff;
     }
@@ -68,12 +70,22 @@
 
 .section {
   padding: 70px 50px;
+
+  .heading-secondary {
+    margin-bottom: 40px;
+  }
 }
 
 .contact {
   &__form {
     .button {
       margin-top: 40px;
+    }
+  }
+
+  &__field {
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
     }
   }
 }

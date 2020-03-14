@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { Fade } from "react-reveal";
+import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 
-import "./Header.scss";
+import { Button, IconLink } from "../../components";
 
 import { ReactComponent as Logo } from "../../assets/img/logo.svg";
-import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
-import { Button, IconLink } from "../../components";
+import "./Header.scss";
 
 const Header = () => {
   const links = [
@@ -18,25 +20,37 @@ const Header = () => {
     },
     {
       component: FaEnvelope,
-      link: "mailto:dyaroshevych@gmail.com"
+      link: "contact"
     }
   ];
 
   return (
     <header className="header">
       <div className="wrapper">
-        <Logo className="logo" />
-        <h1 className="heading-primary">Dmitrii Yaroshevych</h1>
-        <span className="subheading-primary">Frontend Developer</span>
+        <Fade bottom duration={500}>
+          <Logo className="logo" />
+        </Fade>
+        <Fade bottom delay={50} duration={500}>
+          <h1 className="heading-primary">Dmitrii Yaroshevych</h1>
+        </Fade>
+        <Fade bottom delay={100} duration={500}>
+          <span className="subheading-primary">Frontend Developer</span>
+        </Fade>
         <ul className="header__social-list">
           {links.map(({ component, link }, idx) => (
-            <li className="header__social-item" key={idx}>
-              <IconLink Icon={component} link={link} />
-            </li>
+            <Fade bottom delay={150 + 50 * idx} duration={500} key={idx}>
+              <li className="header__social-item">
+                <IconLink Icon={component} link={link} />
+              </li>
+            </Fade>
           ))}
-          <li className="header__social-item">
-            <Button color="white" text="Let's work together" />
-          </li>
+          <Fade bottom delay={300} duration={500}>
+            <li className="header__social-item">
+              <Link to="contact" smooth>
+                <Button color="white" text="Let's work together" />
+              </Link>
+            </li>
+          </Fade>
         </ul>
       </div>
     </header>
