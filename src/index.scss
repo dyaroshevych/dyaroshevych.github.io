@@ -47,8 +47,9 @@ button {
   cursor: pointer;
 }
 
-ul {
-  list-style: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 span {
@@ -84,6 +85,11 @@ span {
 .heading-tertiary {
   font-weight: 700;
   font-size: 24px;
+}
+
+.heading-quarternary {
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .paragraph {
