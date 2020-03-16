@@ -1,4 +1,4 @@
-<svg viewBox="60 174.5 145 144" version="1.1">
+<svg viewBox="60 174.5 145 145" version="1.1">
       <g
         stroke="none"
         stroke-width="1"
@@ -11,7 +11,7 @@
           fill-rule="nonzero"
           transform="translate(119.367532, 234.367532) rotate(45.000000) translate(-119.367532, -230.367532)"
         ></path>
-        <g transform="translate(0, 312.000000)">
+        <g transform="translate(0, 313.000000)">
           <rect x="0" y="0" width="323" height="6" fill="#c63030"></rect>
         </g>
         <g transform="translate(117.000000, 220.000000)">

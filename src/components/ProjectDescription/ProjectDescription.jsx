@@ -18,12 +18,12 @@ const ProjectDescription = ({
 }) => {
   const linksContainer = (
     <div className="project-description__links">
-      <Fade bottom>
+      <Fade bottom delay={100} duration={500}>
         <a className="project-description__link" href={repo} target="blank">
           <Button color="orange" shape="square" text="GitHub repository" />
         </a>
       </Fade>
-      <Fade bottom delay={50}>
+      <Fade bottom delay={200} duration={500}>
         <a className="project-description__link" href={link} target="blank">
           <Button color="orange" shape="square" text="Live Website" />
         </a>
@@ -31,7 +31,7 @@ const ProjectDescription = ({
     </div>
   );
   return (
-    <Slide bottom duration={500} enter={true} exit={true}>
+    <Slide bottom duration={500}>
       <div className="project-description">
         <div className="project-description__menu-container">
           <ul className="wrapper project-description__menu">
@@ -62,47 +62,51 @@ const ProjectDescription = ({
             <div className="project-description__section">{linksContainer}</div>
             <div className="project-description__section">
               <div className="project-description__section__text-container">
-                <Fade left delay={50}>
+                <Fade left delay={50} duration={1000}>
                   <span className="project-description__number">1</span>
                   <h3 className="heading-tertiary">General information</h3>
                   <p className="paragraph">{description}</p>
                 </Fade>
               </div>
               <div className="project-description__section__image-container">
-                <Fade right delay={50}>
+                <Fade right delay={50} duration={1000}>
                   <Image projectName={name} {...images[0]} />
                 </Fade>
               </div>
             </div>
             <div className="project-description__section">
               <div className="project-description__section__image-container">
-                <Fade left delay={250}>
+                <Fade left delay={250} duration={1000}>
                   <Image projectName={name} {...images[1]} />
                 </Fade>
               </div>
               <div className="project-description__section__text-container">
-                <Fade right delay={250}>
+                <Fade right delay={250} duration={1000}>
                   <>
                     <span className="project-description__number">2</span>
                     <h3 className="heading-tertiary">Technologies used</h3>
-                    {technologies.map((list, idx) => (
-                      <div
-                        className="project-description__list-container"
-                        key={`${idx}_${list.name}`}
-                      >
-                        {list.name && (
-                          <h4 className="heading-quarternary">{list.name}:</h4>
-                        )}
-                        <List items={list.technologies} rows={1} />
-                      </div>
-                    ))}
+                    <div className="project-description__technologies-container">
+                      {technologies.map((list, idx) => (
+                        <div
+                          className="project-description__list-container"
+                          key={`${idx}_${list.name}`}
+                        >
+                          {list.name && (
+                            <h4 className="heading-quarternary">
+                              {list.name}:
+                            </h4>
+                          )}
+                          <List items={list.technologies} rows={1} />
+                        </div>
+                      ))}
+                    </div>
                   </>
                 </Fade>
               </div>
             </div>
             <div className="project-description__section">
               <div className="project-description__section__text-container">
-                <Fade left delay={250}>
+                <Fade left duration={1000}>
                   <>
                     <span className="project-description__number">3</span>
                     <h3 className="heading-tertiary">The process</h3>
@@ -115,7 +119,7 @@ const ProjectDescription = ({
                 </Fade>
               </div>
               <div className="project-description__section__image-container">
-                <Fade right delay={250}>
+                <Fade right duration={1000}>
                   <Image projectName={name} {...images[2]} />
                 </Fade>
               </div>

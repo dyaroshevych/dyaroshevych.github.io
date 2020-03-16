@@ -124,6 +124,10 @@
     }
   }
 
+  &__technologies-container {
+    display: flex;
+  }
+
   &__list-container {
     &:not(:last-of-type) {
       margin-bottom: 35px;

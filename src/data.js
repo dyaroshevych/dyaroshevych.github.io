@@ -38,8 +38,8 @@ export const projects = [
       }
     ],
     process: [
-      "Having discussed basic information about the website such as example websites, target audience, general structure and preferable color scheme, I created a website with thumbnail images and added content after receiving it from the client.",
-      "After publishing my work to the clients' domain, I did some minor changes in it and made the website responsive after the client was satisfied."
+      "Having discussed basic information such as target audience, preferable color scheme and general structure, I created a website with thumbnail images and added content after receiving it from the client.",
+      "After publishing the product using GitHub Pages, I did some minor design changes in it and made the website responsive. Eventually, I published the final product to the clients' domain."
     ],
     techStack: [0, 1, 2],
     repo: "https://github.com/dyaroshevych/mathews-realty",
@@ -70,8 +70,8 @@ export const projects = [
       }
     ],
     process: [
-      "Having discussed basic information about the website such as example websites, target audience, general structure and preferable color scheme, I created a website with thumbnail images and added content after receiving it from the client.",
-      "After publishing my work to the clients' domain, I did some minor changes in it and made the website responsive after the client was satisfied."
+      "Having discussed basic information such as target audience, preferable color scheme and general structure, I created a website with provided images and videos and added text content after receiving it from the client.",
+      "After publishing the product using GitHub Pages, I did some minor design changes in it and made the website responsive. Eventually, I published the final product to the clients' domain."
     ],
     techStack: [3, 4, 2],
     repo: "https://github.com/dyaroshevych/advanced-hemp-trailer",
@@ -97,8 +97,8 @@ export const projects = [
       }
     ],
     process: [
-      "Having discussed basic information about the website such as example websites, target audience, general structure and preferable color scheme, I created a website with thumbnail images and added content after receiving it from the client.",
-      "After publishing my work to the clients' domain, I did some minor changes in it and made the website responsive after the client was satisfied."
+      "Having discussed basic information such as target audience, preferable color scheme and general structure, I created a website with thumbnail images and added content after receiving it from the client.",
+      "After publishing the product using GitHub Pages, I did some minor design changes in it and made the website responsive. Eventually, I published the final product to the clients' domain."
     ],
     techStack: [0, 1, 2],
     repo: "https://github.com/dyaroshevych/orbital-view",
@@ -106,7 +106,7 @@ export const projects = [
     images: [
       { url: project_2_1, description: "Home page" },
       { url: project_2_2, description: "FAQ page" },
-      { url: project_2_3, description: "How it works page" }
+      { url: project_2_3, description: "'How it works' page" }
     ]
   }
 ];
