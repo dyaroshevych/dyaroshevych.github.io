@@ -63,25 +63,27 @@ const ProjectDescription = ({
             <div className="project-description__section">
               <div className="project-description__section__text-container">
                 <Fade left delay={50} duration={1000}>
-                  <span className="project-description__number">1</span>
-                  <h3 className="heading-tertiary">General information</h3>
-                  <p className="paragraph">{description}</p>
+                  <>
+                    <span className="project-description__number">1</span>
+                    <h3 className="heading-tertiary">General information</h3>
+                    <p className="paragraph">{description}</p>
+                  </>
                 </Fade>
               </div>
               <div className="project-description__section__image-container">
-                <Fade right delay={50} duration={1000}>
+                <Fade right delay={50}>
                   <Image projectName={name} {...images[0]} />
                 </Fade>
               </div>
             </div>
             <div className="project-description__section">
               <div className="project-description__section__image-container">
-                <Fade left delay={250} duration={1000}>
+                <Fade left delay={150}>
                   <Image projectName={name} {...images[1]} />
                 </Fade>
               </div>
               <div className="project-description__section__text-container">
-                <Fade right delay={250} duration={1000}>
+                <Fade right delay={150}>
                   <>
                     <span className="project-description__number">2</span>
                     <h3 className="heading-tertiary">Technologies used</h3>
@@ -89,7 +91,7 @@ const ProjectDescription = ({
                       {technologies.map((list, idx) => (
                         <div
                           className="project-description__list-container"
-                          key={`${idx}_${list.name}`}
+                          key={`${name}_${idx}_${list.name}`}
                         >
                           {list.name && (
                             <h4 className="heading-quarternary">
@@ -106,12 +108,12 @@ const ProjectDescription = ({
             </div>
             <div className="project-description__section">
               <div className="project-description__section__text-container">
-                <Fade left duration={1000}>
+                <Fade left delay={150}>
                   <>
                     <span className="project-description__number">3</span>
                     <h3 className="heading-tertiary">The process</h3>
                     {process.map((item, idx) => (
-                      <p className="paragraph" key={idx}>
+                      <p className="paragraph" key={`${name}_3_${idx}`}>
                         {item}
                       </p>
                     ))}
@@ -119,7 +121,7 @@ const ProjectDescription = ({
                 </Fade>
               </div>
               <div className="project-description__section__image-container">
-                <Fade right duration={1000}>
+                <Fade right delay={150}>
                   <Image projectName={name} {...images[2]} />
                 </Fade>
               </div>

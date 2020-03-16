@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -65,16 +67,32 @@ span {
 .wrapper {
   width: 1170px;
   margin: 0 auto;
+
+  @include desktop-lg {
+    width: calc(100% - 40px);
+  }
+
+  @include tablet {
+    width: 550px;
+  }
 }
 
 .heading-primary {
   font-weight: 700;
   font-size: 65px;
+
+  @include tablet {
+    font-size: 45px;
+  }
 }
 
 .subheading-primary {
   font-weight: 400;
   font-size: 30px;
+
+  @include tablet {
+    font-size: 25px;
+  }
 }
 
 .heading-secondary {

@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .project-description {
   position: fixed;
   z-index: 2;
@@ -23,9 +25,20 @@
     justify-content: space-between;
     align-items: center;
 
+    @include tablet {
+      flex-wrap: wrap-reverse;
+      &.wrapper {
+        width: calc(100% - 20px);
+      }
+    }
+
     .heading-secondary {
       color: #333;
       transition: color 0.25s ease;
+
+      @include tablet {
+        margin-right: 30px;
+      }
 
       &:hover {
         color: #ff7644;
@@ -39,6 +52,10 @@
       padding: 20px 0;
       box-shadow: 0 2px 10px -2px rgba(34, 34, 34, 0.15);
       z-index: 3;
+
+      @include tablet {
+        padding: 10px 0;
+      }
     }
   }
 
@@ -84,21 +101,60 @@
     justify-content: space-between;
     margin: 90px 0;
 
-    &:first-of-type {
-      padding-top: 80px;
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      margin: 50px 0;
+
+      &:first-of-type {
+        padding-top: 80px;
+      }
+
+      &:nth-of-type(3) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+
+    &__text-container {
+      position: relative;
+
+      @include desktop-sm {
+        width: calc(45% - 20px);
+      }
+    }
+
+    &__image-container {
+      @include desktop-sm {
+        width: calc(55% - 20px);
+      }
+
+      @include tablet {
+        margin-top: 50px;
+      }
     }
 
     &__text-container,
     &__image-container {
       width: calc(50% - 40px);
-    }
 
-    &__text-container {
-      position: relative;
+      @include desktop-lg {
+        width: calc(50% - 20px);
+      }
+
+      @include tablet {
+        width: 550px;
+      }
+
+      @include mobile-lg {
+        width: calc(100% - 10px);
+      }
     }
   }
 
   &__number {
+    display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -106,6 +162,11 @@
     font-size: 100px;
     color: rgba(255, 118, 68, 0.2);
     line-height: 100px;
+
+    @include tablet {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__links {
@@ -126,11 +187,26 @@
 
   &__technologies-container {
     display: flex;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__list-container {
-    &:not(:last-of-type) {
-      margin-bottom: 35px;
+    width: 50%;
+
+    &:first-of-type .list {
+      margin-right: 100px;
+    }
+
+    .list {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      width: fit-content;
+      text-align: left;
     }
   }
 }
