@@ -1,0 +1,141 @@
+@import "../../index.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", -apple-system, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &.scrollable {
+    overflow-y: scroll;
+  }
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    background-color: #ff7644;
+    transition: opacity 0.25s ease;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    opacity: 0;
+    width: 7px;
+    background-color: #333;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    transition: opacity 0.25s ease;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+span {
+  display: inline-block;
+}
+
+::selection {
+  background-color: #ff7644;
+  color: #fff;
+  text-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+
+  @include desktop-lg {
+    width: calc(100% - 40px);
+  }
+
+  @include tablet {
+    width: 550px;
+  }
+
+  @include mobile-lg {
+    width: calc(100vw - 20px);
+  }
+}
+
+.heading-primary {
+  font-weight: 700;
+  font-size: 65px;
+
+  @include tablet {
+    font-size: 45px;
+  }
+
+  @include mobile-md {
+    line-height: 45px;
+  }
+}
+
+.subheading-primary {
+  font-weight: 400;
+  font-size: 30px;
+
+  @include tablet {
+    font-size: 25px;
+  }
+}
+
+.heading-secondary {
+  font-weight: 700;
+  font-size: 35px;
+
+  @include tablet {
+    font-size: 30px;
+  }
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 24px;
+
+  @include tablet {
+    font-size: 22px;
+  }
+}
+
+.heading-quarternary {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.logo {
+  width: 80px;
+}
