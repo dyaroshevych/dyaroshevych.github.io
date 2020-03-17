@@ -12,10 +12,28 @@
   align-items: center;
   color: #fff;
 
+  @include height-xs {
+    position: relative;
+    padding: 10px 0 30px;
+    align-items: flex-start;
+  }
+
+  @include tablet {
+    position: relative;
+    padding: 10px 0 30px;
+    align-items: flex-start;
+  }
+
+  @include mobile-md {
+    text-align: center;
+  }
+
   .logo {
     margin-bottom: 60px;
 
     @include tablet {
+      width: 50px;
+      height: 50px;
       margin-bottom: 30px;
     }
   }
@@ -24,11 +42,29 @@
     &-list {
       display: flex;
       margin-top: 40px;
+
+      @include tablet {
+        margin-top: 20px;
+      }
+
+      @include mobile-md {
+        flex-wrap: wrap;
+        margin-top: 0;
+        justify-content: center;
+      }
     }
 
     &-item {
       &:not(:last-of-type) {
         margin-right: 20px;
+      }
+
+      @include mobile-md {
+        margin-top: 20px;
+
+        &:first-of-type {
+          margin-left: 20px;
+        }
       }
     }
   }

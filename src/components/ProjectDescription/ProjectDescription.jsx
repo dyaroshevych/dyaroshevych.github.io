@@ -98,7 +98,7 @@ const ProjectDescription = ({
                               {list.name}:
                             </h4>
                           )}
-                          <List items={list.technologies} rows={1} />
+                          <List items={list.technologies} columns={1} />
                         </div>
                       ))}
                     </div>

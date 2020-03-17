@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .button {
   $self: &;
   transition: all 0.25s ease;
@@ -17,6 +19,11 @@
     padding: 8.6px 20px;
     border-radius: 500px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+
+    @include tablet {
+      font-size: 20px;
+      padding: 8.9px 32px;
+    }
   }
 
   &--white {

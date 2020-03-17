@@ -6,10 +6,31 @@
   margin-bottom: 20px;
   margin-top: calc(100vh - 120px);
   background-image: linear-gradient(rgba(255, 118, 68, 0) 0%, #ff7644 70px);
-  border-radius: 7px;
 
   @include desktop-sm {
     margin-top: calc(100vh - 40px);
+  }
+
+  @include height-sm {
+    margin-top: calc(100vh - 20px);
+  }
+
+  @include height-xs {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: -20px;
+    background-color: #ff7644;
+  }
+
+  @include tablet {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: -20px;
+    background-color: #ff7644;
+  }
+
+  @include mobile-md {
+    text-align: center;
   }
 
   &__container {
@@ -23,8 +44,7 @@
     width: calc(50% - 10px);
 
     @include tablet {
-      width: 550px;
-      margin: 0 auto;
+      width: 100%;
     }
   }
 
@@ -80,36 +100,76 @@
       font-weight: 400;
       font-size: 20px;
       color: #fff;
-    }
-  }
-}
 
-.section {
-  padding: 70px 50px;
+      @include desktop-sm {
+        right: 25px;
+      }
 
-  @include desktop-lg {
-    padding: 50px 30px;
-  }
+      @include tablet {
+        right: 50%;
+        transform: translate(50%, -50%);
+      }
 
-  @include desktop-sm {
-    padding: 50px 20px;
-  }
-
-  .heading-secondary {
-    margin-bottom: 40px;
-  }
-}
-
-.contact {
-  &__form {
-    .button {
-      margin-top: 40px;
+      @include mobile-md {
+        padding: 7px 14px;
+        min-width: fit-content;
+      }
     }
   }
 
-  &__field {
-    &:not(:last-of-type) {
+  .skills {
+    .list {
+      &__item {
+        @include mobile-md {
+          padding-left: 0;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    &__form {
+      .button {
+        margin-top: 40px;
+
+        @include tablet {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__field {
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+
+        @include mobile-md {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .section {
+    padding: 70px 50px;
+
+    @include desktop-lg {
+      padding: 50px 30px;
+    }
+
+    @include desktop-sm {
+      padding: 50px 20px;
+    }
+
+    .heading-secondary {
       margin-bottom: 40px;
+
+      @include tablet {
+        margin-bottom: 25px;
+      }
     }
   }
 }

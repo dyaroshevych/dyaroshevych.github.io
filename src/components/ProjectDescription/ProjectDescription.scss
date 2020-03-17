@@ -35,9 +35,10 @@
     .heading-secondary {
       color: #333;
       transition: color 0.25s ease;
+      margin-right: 20px;
 
-      @include tablet {
-        margin-right: 30px;
+      @include mobile-sm {
+        font-size: 25px;
       }
 
       &:hover {
@@ -144,12 +145,33 @@
       }
 
       @include tablet {
-        width: 550px;
+        width: 100%;
       }
+    }
+  }
 
-      @include mobile-lg {
-        width: calc(100% - 10px);
+  &__links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include mobile-sm {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    &:not(:last-of-type) {
+      margin-right: 20px;
+
+      @include mobile-sm {
+        margin-right: 0;
+        margin-bottom: 15px;
       }
+    }
+
+    .button {
+      min-width: 180px;
     }
   }
 
@@ -169,22 +191,6 @@
     }
   }
 
-  &__links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__link {
-    &:not(:last-of-type) {
-      margin-right: 20px;
-    }
-
-    .button {
-      min-width: 180px;
-    }
-  }
-
   &__technologies-container {
     display: flex;
 
@@ -194,7 +200,7 @@
   }
 
   &__list-container {
-    width: 50%;
+    max-width: 50%;
 
     &:first-of-type .list {
       margin-right: 100px;
