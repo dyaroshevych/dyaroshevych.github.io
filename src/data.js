@@ -13,13 +13,10 @@ export const skills = [
   "CSS3",
   "Javascript",
   "React.js",
-  "SASS",
+  "SCSS",
+  "Sass",
   "Bootstrap 4",
   "Git",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "MySQL",
   "jQuery"
 ];
 export const projects = [
