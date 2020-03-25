@@ -3,6 +3,12 @@
 .field {
   max-width: 100%;
 
+  &__label {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
   &__input {
     &:valid {
       border-color: #078307;

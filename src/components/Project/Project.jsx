@@ -30,7 +30,8 @@ const Project = ({ name, techStack, repo, link, images, openProject }) => (
         >
           <FaGithub />
         </a>
-        <button className="project__link">
+        <button className="project__link"
+          aria-label={`${name} - More Info`}>
           <FaPlus />
         </button>
         <a

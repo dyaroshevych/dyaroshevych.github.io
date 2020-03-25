@@ -10,6 +10,7 @@ const Field = ({
   maxChars = 1000
 }) => (
   <div className="field">
+    <label className="field__label" htmlFor={`field__${name}`}>{placeholder}</label>
     {type === "textarea" ? (
       <textarea
         className="field__textarea"
@@ -17,6 +18,7 @@ const Field = ({
         placeholder={placeholder}
         maxLength={maxChars}
         rows="4"
+        id={`field__${name}`}
       ></textarea>
     ) : (
       <input
@@ -26,6 +28,7 @@ const Field = ({
         placeholder={placeholder}
         required={isRequired}
         maxLength={maxChars}
+        id={`field__${name}`}
       />
     )}
   </div>
