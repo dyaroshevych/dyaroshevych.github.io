@@ -7,6 +7,9 @@ import project_2_3 from "./assets/img/projects/2_3.jpg";
 import project_4_1 from "./assets/img/projects/4_1.jpg";
 import project_4_2 from "./assets/img/projects/4_2.jpg";
 import project_4_3 from "./assets/img/projects/4_3.jpg";
+import project_5_1 from "./assets/img/projects/5_1.jpg";
+import project_5_2 from "./assets/img/projects/5_2.jpg";
+import project_5_3 from "./assets/img/projects/5_3.jpg";
 
 export const skills = [
   "HTML5",
@@ -77,6 +80,33 @@ export const projects = [
       { url: project_4_1, description: "Product section" },
       { url: project_4_2, description: "Header" },
       { url: project_4_3, description: "Image slider" }
+    ]
+  },
+  {
+    name: "Planner Plus",
+    description:
+      "This is one of my pet projects, a web application meant for taking notes and separating them in different folders. Having seen many todo apps with basic design and functionality, I decided to build a more advanced one.",
+    technologies: [
+      {
+        name: "Tech stack",
+        technologies: ["React.js", "SCSS", "Javascript"]
+      },
+      {
+        name: "External libraries",
+        technologies: ["react-router-dom (useHistory hook, Switch, Route)"]
+      }
+    ],
+    process: [
+      "I planned the structure and functionality of this web application. These include creating, editing and deleting folders and tasks and switching between lists.",
+      "Then, I built the app itself and provided a mobile version for it with convenient menu."
+    ],
+    techStack: [3, 4, 2],
+    repo: "https://github.com/dyaroshevych/planner-plus",
+    link: "https://dyaroshevych.github.io/planner-plus",
+    images: [
+      { url: project_5_1, description: "Desktop view" },
+      { url: project_5_2, description: "Mobile menu" },
+      { url: project_5_3, description: "Adding new folder" }
     ]
   },
   {
