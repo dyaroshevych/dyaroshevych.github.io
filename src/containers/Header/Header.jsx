@@ -12,15 +12,18 @@ const Header = () => {
   const links = [
     {
       component: FaGithub,
-      link: "https://github.com/dyaroshevych"
+      link: "https://github.com/dyaroshevych",
+      label: "My GitHub account"
     },
     {
       component: FaLinkedinIn,
-      link: "https://www.linkedin.com/in/dyaroshevych"
+      link: "https://www.linkedin.com/in/dyaroshevych",
+      label: "My LinkedIn account"
     },
     {
       component: FaEnvelope,
-      link: "contact"
+      link: "contact",
+      label: "Contact me"
     }
   ];
 
@@ -37,10 +40,10 @@ const Header = () => {
           <span className="subheading-primary">Frontend Developer</span>
         </Fade>
         <ul className="header__social-list">
-          {links.map(({ component, link }, idx) => (
+          {links.map(({ component, link, label }, idx) => (
             <Fade bottom delay={150 + 50 * idx} duration={500} key={idx}>
               <li className="header__social-item">
-                <IconLink Icon={component} link={link} />
+                <IconLink Icon={component} link={link} ariaLabel={label} />
               </li>
             </Fade>
           ))}

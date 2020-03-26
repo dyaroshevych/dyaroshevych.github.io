@@ -19,12 +19,24 @@ const ProjectDescription = ({
   const linksContainer = (
     <div className="project-description__links">
       <Fade bottom delay={100} duration={500}>
-        <a className="project-description__link" href={repo} target="blank">
+        <a
+          className="project-description__link"
+          href={repo}
+          aria-label={`${name} - GitHub repository`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Button color="orange" shape="square" text="GitHub repository" />
         </a>
       </Fade>
       <Fade bottom delay={200} duration={500}>
-        <a className="project-description__link" href={link} target="blank">
+        <a
+          className="project-description__link"
+          href={link}
+          aria-label={`${name} - live website`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Button color="orange" shape="square" text="Live Website" />
         </a>
       </Fade>
@@ -39,7 +51,9 @@ const ProjectDescription = ({
               <a
                 className="project-description__name"
                 href={link}
-                target="blank"
+                aria-label={`${name} - live website`}
+                rel="noopener noreferrer"
+                target="_blank"
               >
                 <h2 className="heading-secondary">
                   {name}

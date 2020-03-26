@@ -25,19 +25,22 @@ const Project = ({ name, techStack, repo, link, images, openProject }) => (
         <a
           className="project__link"
           href={repo}
-          target="blank"
+          aria-label={`${name} - more info`}
+          rel="noopener noreferrer"
+          target="_blank"
           onClick={e => e.stopPropagation()}
         >
           <FaGithub />
         </a>
-        <button className="project__link"
-          aria-label={`${name} - More Info`}>
+        <div className="project__link" aria-label={`${name} - more info`}>
           <FaPlus />
-        </button>
+        </div>
         <a
           className="project__link"
           href={link}
-          target="blank"
+          aria-label={`${name} - live website`}
+          rel="noopener noreferrer"
+          target="_blank"
           onClick={e => e.stopPropagation()}
         >
           <FaLink />

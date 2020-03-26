@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import "./IconLink.scss";
 
-const IconLink = ({ Icon, link }) =>
+const IconLink = ({ Icon, link, ariaLabel = "" }) =>
   link === "contact" ? (
     <Link to={link} smooth>
       <div className="icon-link icon-link--red icon-link--round">
@@ -14,6 +14,7 @@ const IconLink = ({ Icon, link }) =>
     <a
       href={link}
       className="icon-link icon-link--red icon-link--round"
+      aria-label={ariaLabel}
       rel="noopener noreferrer"
       target="_blank"
     >
