@@ -129,7 +129,7 @@ export const projects = [
     ],
     techStack: [0, 1, 2],
     repo: "https://github.com/dyaroshevych/orbital-view",
-    link: "https://orbitalview.ai",
+    link: "https://dyaroshevych.github.io/orbital-view",
     images: [
       { url: project_2_1, description: "Home page" },
       { url: project_2_2, description: "FAQ page" },
