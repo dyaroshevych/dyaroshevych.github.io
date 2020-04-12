@@ -6,19 +6,19 @@ import "./IconLink.scss";
 const IconLink = ({ Icon, link, ariaLabel = "" }) =>
   link === "contact" ? (
     <Link to={link} smooth>
-      <div className="icon-link icon-link--red icon-link--round">
-        <Icon className="icon-link__icon" />
+      <div className="IconLink IconLink___red IconLink___round">
+        <Icon className="IconLink_icon" />
       </div>
     </Link>
   ) : (
     <a
       href={link}
-      className="icon-link icon-link--red icon-link--round"
+      className="IconLink IconLink___red IconLink___round"
       aria-label={ariaLabel}
       rel="noopener noreferrer"
       target="_blank"
     >
-      <Icon className="icon-link__icon" />
+      <Icon className="IconLink_icon" />
     </a>
   );
 

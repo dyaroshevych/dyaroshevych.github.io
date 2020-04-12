@@ -7,28 +7,30 @@ const Field = ({
   type = "text",
   placeholder = "",
   isRequired = false,
-  maxChars = 1000
+  maxChars = 1000,
 }) => (
-  <div className="field">
-    <label className="field__label" htmlFor={`field__${name}`}>{placeholder}</label>
+  <div className="Field">
+    <label className="Field_label" htmlFor={`Field_${name}`}>
+      {placeholder}
+    </label>
     {type === "textarea" ? (
       <textarea
-        className="field__textarea"
+        className="Field_textarea"
         name={name}
         placeholder={placeholder}
         maxLength={maxChars}
         rows="4"
-        id={`field__${name}`}
+        id={`Field_${name}`}
       ></textarea>
     ) : (
       <input
-        className="field__input"
+        className="Field_input"
         name={name}
         type={type}
         placeholder={placeholder}
         required={isRequired}
         maxLength={maxChars}
-        id={`field__${name}`}
+        id={`Field_${name}`}
       />
     )}
   </div>

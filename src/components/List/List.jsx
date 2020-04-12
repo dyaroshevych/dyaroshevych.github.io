@@ -4,10 +4,10 @@ import { Fade } from "react-reveal";
 import "./List.scss";
 
 const List = ({ items, columns }) => (
-  <ul className="list">
+  <ul className="List">
     {items.map((item, idx) => (
       <Fade delay={idx * 50} duration={500} key={idx}>
-        <li className={`list__item list__item-${columns}`}>{item}</li>
+        <li className={`List_item List_item___${columns}`}>{item}</li>
       </Fade>
     ))}
   </ul>

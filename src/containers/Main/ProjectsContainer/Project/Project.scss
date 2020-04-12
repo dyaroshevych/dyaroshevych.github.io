@@ -1,6 +1,6 @@
-@import "../../index.scss";
+@import "../../../../index.scss";
 
-.project {
+.Project {
   $self: &;
   position: relative;
   display: flex;
@@ -17,12 +17,12 @@
   }
 
   &:hover {
-    #{$self}__background {
+    #{$self}_background {
       transform: scale(1.1) translateZ(0);
     }
   }
 
-  &__background {
+  &_background {
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -44,7 +44,7 @@
     }
   }
 
-  &__info {
+  &_info {
     position: relative;
     z-index: 1;
     padding: 20px 50px;
@@ -70,13 +70,13 @@
     }
   }
 
-  &__skills {
-    &-list {
+  &_skills {
+    &List {
       display: flex;
       margin: 5px 0 30px;
     }
 
-    &-item {
+    &Item {
       font-weight: 400;
       font-size: 12px;
       color: #a8a8a8;
@@ -87,7 +87,7 @@
     }
   }
 
-  &__link {
+  &_link {
     display: inline-block;
     font-size: 20px;
     color: #ff895d;
@@ -99,7 +99,7 @@
     }
   }
 
-  a#{$self}__link:last-of-type {
+  a#{$self}_link:last-of-type {
     margin-right: 0;
   }
 }

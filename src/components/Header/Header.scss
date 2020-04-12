@@ -1,6 +1,6 @@
 @import "../../index.scss";
 
-.header {
+.Header {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@
     text-align: center;
   }
 
-  .logo {
+  .Logo {
     margin-bottom: 60px;
 
     @include tablet {
@@ -38,8 +38,8 @@
     }
   }
 
-  &__social {
-    &-list {
+  &_social {
+    &List {
       display: flex;
       margin-top: 40px;
 
@@ -54,7 +54,7 @@
       }
     }
 
-    &-item {
+    &Item {
       &:not(:last-of-type) {
         margin-right: 20px;
       }

@@ -4,8 +4,8 @@ import "./Button.scss";
 
 const Button = ({ color = "white", shape = "round", text }) => (
   <button
-    className={`button${color ? ` button--${color}` : ""}${
-      shape ? ` button--${shape}` : ""
+    className={`Button${color ? ` Button___${color}` : ""}${
+      shape ? ` Button___${shape}` : ""
     }`}
   >
     {text}

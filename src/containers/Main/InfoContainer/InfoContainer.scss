@@ -1,0 +1,13 @@
+@import "../../../index.scss";
+
+.Main_infoContainer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px 0 rgba(34, 34, 34, 0.3);
+  width: calc(50% - 10px);
+
+  @include tablet {
+    width: 100%;
+  }
+}

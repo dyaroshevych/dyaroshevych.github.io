@@ -1,0 +1,18 @@
+@import "../../index.scss";
+
+.Wrapper {
+  width: 1170px;
+  margin: 0 auto;
+
+  @include desktop-lg {
+    width: calc(100% - 40px);
+  }
+
+  @include tablet {
+    width: 550px;
+  }
+
+  @include mobile-lg {
+    width: calc(100vw - 20px);
+  }
+}

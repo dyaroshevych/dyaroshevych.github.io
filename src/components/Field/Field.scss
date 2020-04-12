@@ -1,15 +1,15 @@
 @import "../../index.scss";
 
-.field {
+.Field {
   max-width: 100%;
 
-  &__label {
+  &_label {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
 
-  &__input {
+  &_input {
     &:valid {
       border-color: #078307;
     }
@@ -19,8 +19,8 @@
     }
   }
 
-  &__input,
-  &__textarea {
+  &_input,
+  &_textarea {
     display: block;
     width: 100%;
     background-color: transparent !important;
@@ -62,7 +62,7 @@
     }
   }
 
-  &__textarea {
+  &_textarea {
     min-width: 100%;
     max-width: 485px;
     min-height: 30px;
