@@ -28,7 +28,7 @@
       &:hover {
         background-color: transparent;
 
-        & #{$self}__icon {
+        & #{$self}_icon {
           color: #c63030;
         }
       }

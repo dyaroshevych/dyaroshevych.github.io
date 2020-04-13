@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Slide } from "react-reveal";
+import { Slide } from "react-reveal";
 
 import { Wrapper } from "../../hoc";
 import {
