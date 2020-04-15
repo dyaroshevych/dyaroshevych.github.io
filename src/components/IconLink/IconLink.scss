@@ -37,7 +37,7 @@
         background-color: #c63030;
         box-shadow: 0px 0px 0px 3px rgba(198, 48, 48, 0.4);
 
-        & #{$self}__icon {
+        & #{$self}_icon {
           color: #ff7644;
         }
       }

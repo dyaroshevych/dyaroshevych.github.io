@@ -11,7 +11,7 @@ const ContactSection = () => {
   const contact = useContext(ContactContext);
 
   return (
-    <Section className="ContactSection" heading="Contact me">
+    <Section className="ContactSection" heading="Contact me" id="contact">
       <form
         className="ContactSection_form"
         action="https://formspree.io/xjlqzbvx"

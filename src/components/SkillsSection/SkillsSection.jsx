@@ -18,7 +18,7 @@ const SkillsSection = () => {
   });
 
   return (
-    <Section className="SkillsSection" heading="My skills">
+    <Section className="SkillsSection" heading="My skills" id="skills">
       <Fade bottom delay={100} duration={500}>
         <List items={skills} columns={skillsColumns} />
       </Fade>
