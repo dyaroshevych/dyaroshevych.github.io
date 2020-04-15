@@ -13,31 +13,28 @@ import {
 
 import "./ProjectDescription.scss";
 
-const ProjectDescription = () => (
-  <Slide bottom duration={500}>
-    <div className="ProjectDescription">
-      <Menu />
-      <div className="ProjectDescription_content">
-        <Wrapper>
-          <Section>
-            <Links />
-          </Section>
-          <Section>
-            <GeneralInfo />
-          </Section>
-          <Section>
-            <TechnologiesInfo />
-          </Section>
-          <Section>
-            <ProcessInfo />
-          </Section>
-          <Section>
-            <Links />
-          </Section>
-        </Wrapper>
+const ProjectDescription = () => {
+  const sections = [
+    <Links />,
+    <GeneralInfo />,
+    <TechnologiesInfo />,
+    <ProcessInfo />,
+    <Links />,
+  ];
+  return (
+    <Slide bottom duration={500}>
+      <div className="ProjectDescription">
+        <Menu />
+        <div className="ProjectDescription_content">
+          <Wrapper>
+            {sections.map((section) => (
+              <Section>{section}</Section>
+            ))}
+          </Wrapper>
+        </div>
       </div>
-    </div>
-  </Slide>
-);
+    </Slide>
+  );
+};
 
 export default ProjectDescription;
