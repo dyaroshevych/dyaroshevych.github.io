@@ -2,7 +2,7 @@
 
 .SkillsSection {
   .List {
-    &__item {
+    &_item {
       @include mobile-md {
         padding-left: 0;
 

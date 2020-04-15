@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Fade } from "react-reveal";
 
-import { ProjectsContext } from "../../context";
+import { ProjectContext, ProjectsContext } from "../../context";
 import { Wrapper } from "../../hoc";
 import { ProjectDescription } from "../../components";
 import { InfoContainer, ProjectsContainer } from "./";
@@ -38,12 +38,14 @@ const Main = () => {
   return (
     <>
       {openedProjectIdx !== null && (
-        <ProjectDescription
-          {...{
+        <ProjectContext.Provider
+          value={{
             ...projects[openedProjectIdx],
             closeProject: toggleProjectHandler,
           }}
-        />
+        >
+          <ProjectDescription />
+        </ProjectContext.Provider>
       )}
       <Fade bottom duration={700}>
         <main className="Main">
@@ -51,7 +53,7 @@ const Main = () => {
             <InfoContainer />
             <ProjectsContainer
               projects={projects}
-              toggleProjectHandler={toggleProjectHandler}
+              openProject={toggleProjectHandler}
             />
           </Wrapper>
         </main>

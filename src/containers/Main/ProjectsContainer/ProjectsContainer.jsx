@@ -5,13 +5,13 @@ import { Project } from "./";
 
 import "./ProjectsContainer.scss";
 
-const ProjectsContainer = ({ projects, toggleProjectHandler }) => {
+const ProjectsContainer = ({ projects, openProject }) => {
   return (
     <div className="Main_projectsContainer">
       <div className="Main_projectsHeading">Latest Projects</div>
       {projects.map((project, idx) => (
         <Fade bottom duration={500} key={idx}>
-          <Project {...{ ...project, openProject: toggleProjectHandler }} />
+          <Project {...{ ...project, openProject }} />
         </Fade>
       ))}
     </div>

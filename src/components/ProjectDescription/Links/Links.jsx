@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Fade } from "react-reveal";
+
+import { ProjectContext } from "../../../context";
 
 import { Button } from "../../";
 
 import "./Links.scss";
 
-const Links = ({ name, repo, link }) => {
+const Links = () => {
+  const { name, repo, link } = useContext(ProjectContext);
+
   return (
     <div className="ProjectDescription_links">
       <Fade bottom delay={100} duration={500}>

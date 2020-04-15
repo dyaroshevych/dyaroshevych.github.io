@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 
+import { ProjectContext } from "../../../context";
 import { Wrapper } from "../../../hoc";
 
 import "./Menu.scss";
 
-const Menu = ({ name, link, closeProject }) => {
+const Menu = () => {
+  const { name, link, closeProject } = useContext(ProjectContext);
+
   return (
     <div className="ProjectDescription_menuContainer">
       <Wrapper>

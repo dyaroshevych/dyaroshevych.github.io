@@ -13,35 +13,26 @@ import {
 
 import "./ProjectDescription.scss";
 
-const ProjectDescription = ({
-  name,
-  description,
-  technologies,
-  process,
-  repo,
-  link,
-  images,
-  closeProject,
-}) => (
+const ProjectDescription = () => (
   <Slide bottom duration={500}>
     <div className="ProjectDescription">
-      <Menu {...{ name, link, closeProject }} />
+      <Menu />
       <div className="ProjectDescription_content">
         <Wrapper>
           <Section>
-            <Links {...{ name, repo, link }} />
+            <Links />
           </Section>
           <Section>
-            <GeneralInfo {...{ name, description, images }} />
+            <GeneralInfo />
           </Section>
           <Section>
-            <TechnologiesInfo {...{ name, technologies, images }} />
+            <TechnologiesInfo />
           </Section>
           <Section>
-            <ProcessInfo {...{ name, process, images }} />
+            <ProcessInfo />
           </Section>
           <Section>
-            <Links {...{ name, repo, link }} />
+            <Links />
           </Section>
         </Wrapper>
       </div>
