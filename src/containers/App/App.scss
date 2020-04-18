@@ -8,7 +8,6 @@
 }
 
 body {
-  font-family: "Lato", -apple-system, sans-serif;
   box-sizing: border-box;
   overflow: hidden;
   background-color: #ff7644;
@@ -31,6 +30,12 @@ body {
     border-bottom-left-radius: 7px;
     transition: opacity 0.25s ease;
   }
+}
+body,
+button,
+input,
+textarea {
+  font-family: "Lato", -apple-system, sans-serif;
 }
 
 a {
