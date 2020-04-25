@@ -1,19 +1,38 @@
 import React from "react";
 
-import project_1_1 from "../assets/img/projects/1_1.jpg";
-import project_1_2 from "../assets/img/projects/1_2.jpg";
-import project_1_3 from "../assets/img/projects/1_3.jpg";
-import project_2_1 from "../assets/img/projects/2_1.jpg";
-import project_2_2 from "../assets/img/projects/2_2.jpg";
-import project_2_3 from "../assets/img/projects/2_3.jpg";
-import project_4_1 from "../assets/img/projects/4_1.jpg";
-import project_4_2 from "../assets/img/projects/4_2.jpg";
-import project_4_3 from "../assets/img/projects/4_3.jpg";
-import project_5_1 from "../assets/img/projects/5_1.jpg";
-import project_5_2 from "../assets/img/projects/5_2.jpg";
-import project_5_3 from "../assets/img/projects/5_3.jpg";
+import * as projectImages from "../assets/img/projects";
 
 const ProjectsContext = React.createContext([
+  {
+    name: "Remote Roofing",
+    description:
+      "This is a website I created for Remote Roofing, the first roofing company to use computer vision to remotely inspect and assess roof damage. I was responsible for implementing all the markup, styling code and scripts. This website consists of 5 fully responsive and cross browser compatible pages.",
+    technologies: [
+      {
+        name: "Tech stack",
+        technologies: ["React.js", "SCSS", "Javascript"],
+      },
+      {
+        name: "External libraries",
+        technologies: ["React Router", "Algolia Places API", "lodash"],
+      },
+    ],
+    process: [
+      "Having discussed basic information such as target audience, preferable color scheme and general structure, I created a website with content received from the client.",
+      "After publishing the product using GitHub Pages, I worked with a designer to fix minor problems and made the website responsive. Eventually, I published the final product using Firebase.",
+    ],
+    techStack: [3, 4, 2],
+    repo: "https://github.com/dyaroshevych/remote-roofing",
+    link: "https://remoteroofing.com",
+    images: [
+      {
+        url: projectImages.remoteroofing1,
+        description: "Types of Roofing section",
+      },
+      { url: projectImages.remoteroofing2, description: "Contact page" },
+      { url: projectImages.remoteroofing3, description: "Login page" },
+    ],
+  },
   {
     name: "Mathew's Realty",
     description:
@@ -36,9 +55,9 @@ const ProjectsContext = React.createContext([
     repo: "https://github.com/dyaroshevych/mathews-realty",
     link: "https://dyaroshevych.github.io/mathews-realty",
     images: [
-      { url: project_1_1, description: "Properties page" },
-      { url: project_1_2, description: "Contact page" },
-      { url: project_1_3, description: "Home page" },
+      { url: projectImages.mathewsrealty1, description: "Properties page" },
+      { url: projectImages.mathewsrealty2, description: "Home page" },
+      { url: projectImages.mathewsrealty3, description: "Contact page" },
     ],
   },
   {
@@ -68,9 +87,9 @@ const ProjectsContext = React.createContext([
     repo: "https://github.com/dyaroshevych/advanced-hemp-trailer",
     link: "https://dyaroshevych.github.io/advanced-hemp-trailer",
     images: [
-      { url: project_4_1, description: "Product section" },
-      { url: project_4_2, description: "Header" },
-      { url: project_4_3, description: "Image slider" },
+      { url: projectImages.advancedhemp1, description: "How it Works section" },
+      { url: projectImages.advancedhemp2, description: "Header" },
+      { url: projectImages.advancedhemp3, description: "Image slider" },
     ],
   },
   {
@@ -84,7 +103,7 @@ const ProjectsContext = React.createContext([
       },
       {
         name: "External libraries",
-        technologies: ["react-router-dom (useHistory hook, Switch, Route)"],
+        technologies: ["React Router (+useHistory hook)"],
       },
     ],
     process: [
@@ -95,9 +114,9 @@ const ProjectsContext = React.createContext([
     repo: "https://github.com/dyaroshevych/planner-plus",
     link: "https://dyaroshevych.github.io/planner-plus",
     images: [
-      { url: project_5_1, description: "Desktop view" },
-      { url: project_5_2, description: "Mobile menu" },
-      { url: project_5_3, description: "Adding new folder" },
+      { url: projectImages.plannerplus1, description: "Desktop view" },
+      { url: projectImages.plannerplus2, description: "Mobile menu" },
+      { url: projectImages.plannerplus3, description: "Adding new folder" },
     ],
   },
   {
@@ -122,9 +141,9 @@ const ProjectsContext = React.createContext([
     repo: "https://github.com/dyaroshevych/orbital-view",
     link: "https://dyaroshevych.github.io/orbital-view",
     images: [
-      { url: project_2_1, description: "Home page" },
-      { url: project_2_2, description: "FAQ page" },
-      { url: project_2_3, description: "'How it works' page" },
+      { url: projectImages.orbitalview1, description: "Home page" },
+      { url: projectImages.orbitalview2, description: "FAQ page" },
+      { url: projectImages.orbitalview3, description: "'How it works' page" },
     ],
   },
 ]);
