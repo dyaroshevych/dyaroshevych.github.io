@@ -1,0 +1,28 @@
+@import "../../../../index.scss";
+
+.ProjectDescription {
+  &_technologiesContainer {
+    display: flex;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &_listContainer {
+    max-width: 50%;
+
+    &:first-of-type .List {
+      margin-right: 100px;
+    }
+
+    .List {
+      flex-direction: column;
+    }
+
+    @include tablet {
+      width: fit-content;
+      text-align: left;
+    }
+  }
+}

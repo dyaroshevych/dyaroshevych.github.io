@@ -1,0 +1,71 @@
+@import "../../../index.scss";
+
+.Field {
+  max-width: 100%;
+
+  &_label {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &_input {
+    &:valid {
+      border-color: #078307;
+    }
+
+    &:not(:valid) {
+      border-color: #c63030;
+    }
+  }
+
+  &_input,
+  &_textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent !important;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+
+    @include mobile-md {
+      text-align: center;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 5px 0;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: #fff;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      transition: background-color 999999s cubic-bezier(1, 0.02, 1, -1.69)
+        999999s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #929292;
+    }
+
+    &:placeholder-shown {
+      border-color: #929292;
+    }
+  }
+
+  &_textarea {
+    min-width: 100%;
+    max-width: 485px;
+    min-height: 30px;
+  }
+}

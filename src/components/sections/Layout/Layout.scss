@@ -1,0 +1,42 @@
+@import "../../../index.scss";
+
+.Layout {
+  position: absolute;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: calc(100vh - 120px);
+  background-image: linear-gradient(rgba(255, 118, 68, 0) 0%, #ff7644 70px);
+
+  @include desktop-sm {
+    margin-top: calc(100vh - 40px);
+  }
+
+  @include height-sm {
+    margin-top: calc(100vh - 20px);
+  }
+
+  @include height-xs {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: -20px;
+    background-color: #ff7644;
+  }
+
+  @include tablet {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: -20px;
+    background-color: #ff7644;
+  }
+
+  @include mobile-md {
+    text-align: center;
+  }
+
+  &_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
