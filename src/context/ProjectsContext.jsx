@@ -61,9 +61,9 @@ const ProjectsContext = React.createContext([
     ],
   },
   {
-    name: "Advanced Trailer",
+    name: "Advanced Hemp Dryer",
     description:
-      "This is a single page application I created for Advanced Hemp Trailer, the largest supplier of processing machinery for the peanut, almond, and hazelnut industries. I was responsible for implementing all the markup, styling code and scripts. This website consists of a header and 5 responsive and cross browser compatible sections.",
+      "This is a single page application I created for Advanced Hemp Dryer, the largest supplier of processing machinery for the peanut, almond, and hazelnut industries. I was responsible for implementing all the markup, styling code and scripts. This website consists of a header and 5 responsive and cross browser compatible sections.",
     technologies: [
       {
         name: "Tech stack",
@@ -81,13 +81,13 @@ const ProjectsContext = React.createContext([
     ],
     process: [
       "Having discussed basic information such as target audience, preferable color scheme and general structure, I created a website with provided images and videos and added text content after receiving it from the client.",
-      "After publishing the product using GitHub Pages, I did some minor design changes in it and made the website responsive. Eventually, I published the final product to the clients' domain.",
+      "After publishing the product using GitHub Pages, I did some minor design changes in it and made the website responsive. Eventually, I published the final product to the clients' domain and connected analytics that were needed.",
     ],
     techStack: [3, 4, 2],
     repo: "https://github.com/dyaroshevych/advanced-hemp-trailer",
-    link: "https://dyaroshevych.github.io/advanced-hemp-trailer",
+    link: "https://advancedhempdryer.com/",
     images: [
-      { url: projectImages.advancedhemp1, description: "How it Works section" },
+      { url: projectImages.advancedhemp1, description: "Benefits section" },
       { url: projectImages.advancedhemp2, description: "Header" },
       { url: projectImages.advancedhemp3, description: "Image slider" },
     ],

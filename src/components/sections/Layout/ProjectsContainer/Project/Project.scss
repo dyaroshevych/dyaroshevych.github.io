@@ -47,7 +47,7 @@
   &_info {
     position: relative;
     z-index: 1;
-    padding: 20px 50px;
+    padding: 20px 27px;
     background-color: rgba(34, 34, 34, 0.9);
     border-radius: 5px;
     width: 70%;
@@ -58,7 +58,7 @@
 
     @include desktop-sm {
       width: 85%;
-      padding: 20px 30px;
+      padding: 20px;
     }
 
     @include tablet {
@@ -67,6 +67,7 @@
 
     @include mobile-lg {
       width: 280px;
+      padding: 20px 10px;
     }
   }
 
