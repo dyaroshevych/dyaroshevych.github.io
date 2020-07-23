@@ -1,0 +1,15 @@
+@import "../../../index.scss";
+
+.Skills {
+  .List {
+    &_item {
+      @include mobile-md {
+        padding-left: 0;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -3,10 +3,12 @@ import { Link } from "react-scroll";
 import { Fade } from "react-reveal";
 import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 
-import { Wrapper } from "../../../hoc";
-import { Button, IconLink } from "../../UI";
+import Wrapper from "../../../hoc/Wrapper/Wrapper";
+import Button from "../../UI/Button/Button";
+import IconLink from "../../UI/IconLink/IconLink";
 
 import { ReactComponent as Logo } from "../../../assets/img/logo.svg";
+
 import "./Header.scss";
 
 const Header = () => {

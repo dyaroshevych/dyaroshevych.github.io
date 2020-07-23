@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Header, Layout } from "./components/sections";
+import Header from "./components/sections/Header/Header";
+import Layout from "./components/sections/Layout/Layout";
 
 import "./App.scss";
 

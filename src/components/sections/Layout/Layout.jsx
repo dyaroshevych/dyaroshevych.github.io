@@ -1,65 +1,43 @@
-import React, { useState, useContext } from "react";
+import React, { Component } from "react";
 import { Fade } from "react-reveal";
 
-import { ProjectContext, ProjectsContext } from "../../../context";
-import { Wrapper } from "../../../hoc";
-import { ProjectDescription } from "../../UI";
-import { InfoContainer, ProjectsContainer } from "./";
+import { connect } from "react-redux";
+
+import Wrapper from "../../../hoc/Wrapper/Wrapper";
+import About from "../About/About";
+import Skills from "../Skills/Skills";
+import Contact from "../Contact/Contact";
+import Projects from "../Projects/Projects";
+import ProjectFull from "../Projects/ProjectFull/ProjectFull";
 
 import "./Layout.scss";
 
-const Layout = () => {
-  const toggleBodyScroll = () => {
-    const body = document.querySelector("body");
+class Layout extends Component {
+  render() {
+    return (
+      <>
+        {this.props.openedProjectIdx !== null && <ProjectFull />}
+        <Fade bottom duration={700}>
+          <main className="Layout">
+            <Wrapper className="Layout_container">
+              <div className="Layout_infoContainer">
+                <About />
+                <Skills />
+                <Contact />
+              </div>
+              <Projects />
+            </Wrapper>
+          </main>
+        </Fade>
+      </>
+    );
+  }
+}
 
-    if (body.classList.contains("scrollable")) {
-      setTimeout(() => {
-        body.classList.remove("scrollable");
-      }, 500);
-    } else {
-      body.classList.add("scrollable");
-    }
+const mapStateToProps = (state) => {
+  return {
+    openedProjectIdx: state.projects.openedProjectIdx,
   };
-
-  const projects = useContext(ProjectsContext);
-
-  const toggleProjectHandler = (name) => {
-    const projectIdx = name
-      ? projects.findIndex((project) => project.name === name)
-      : null;
-
-    setOpenedProjectIdx(projectIdx);
-
-    toggleBodyScroll();
-  };
-
-  const [openedProjectIdx, setOpenedProjectIdx] = useState(null);
-
-  return (
-    <>
-      {openedProjectIdx !== null && (
-        <ProjectContext.Provider
-          value={{
-            ...projects[openedProjectIdx],
-            closeProject: toggleProjectHandler,
-          }}
-        >
-          <ProjectDescription />
-        </ProjectContext.Provider>
-      )}
-      <Fade bottom duration={700}>
-        <main className="Layout">
-          <Wrapper className="Layout_container">
-            <InfoContainer />
-            <ProjectsContainer
-              projects={projects}
-              openProject={toggleProjectHandler}
-            />
-          </Wrapper>
-        </main>
-      </Fade>
-    </>
-  );
 };
 
-export default Layout;
+export default connect(mapStateToProps)(Layout);

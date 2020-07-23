@@ -1,0 +1,23 @@
+@import "../../../index.scss";
+
+.Contact {
+  &_form {
+    .Button {
+      margin-top: 40px;
+
+      @include tablet {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &_field {
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+
+      @include mobile-md {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

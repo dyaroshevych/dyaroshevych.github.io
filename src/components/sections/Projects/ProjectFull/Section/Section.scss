@@ -1,0 +1,54 @@
+@import "../../../../../index.scss";
+
+.ProjectFullSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 90px 0;
+
+  &:first-of-type {
+    padding-top: 80px;
+  }
+
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 0;
+
+    &:nth-of-type(3) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &_textContainer {
+    position: relative;
+
+    @include desktop-sm {
+      width: calc(45% - 20px);
+    }
+  }
+
+  &_imageContainer {
+    @include desktop-sm {
+      width: calc(55% - 20px);
+    }
+
+    @include tablet {
+      margin-top: 50px;
+    }
+  }
+
+  &_textContainer,
+  &_imageContainer {
+    width: calc(50% - 40px);
+
+    @include desktop-lg {
+      width: calc(50% - 20px);
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../../../../index.scss";
+
+.ProjectFullMenu {
+  position: fixed;
+  width: 100vw;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px -2px rgba(34, 34, 34, 0.15);
+  z-index: 3;
+
+  @include tablet {
+    padding: 10px 0;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-wrap: wrap-reverse;
+      &.wrapper {
+        width: calc(100% - 20px);
+      }
+    }
+
+    h2 {
+      transition: color 0.25s ease;
+      margin-right: 20px;
+
+      @include mobile-sm {
+        font-size: 25px;
+      }
+
+      &:hover {
+        color: #ff7644;
+      }
+    }
+  }
+
+  &_projectName,
+  &_closeButton {
+    color: #333;
+  }
+
+  &_linkIcon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  &_closeButton {
+    font-size: 20px;
+    transform: translateY(4px);
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #ff7644;
+    }
+  }
+}
