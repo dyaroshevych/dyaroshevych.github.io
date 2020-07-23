@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Fade } from "react-reveal";
-import axios from "../../../axios";
+
+import { connect } from "react-redux";
+import { fetchSkills } from "../../../store/actions";
 
 import Section from "../../../hoc/Section/Section";
 import List from "../../UI/List/List";
@@ -8,30 +10,27 @@ import Spinner from "../../UI/Spinner/Spinner";
 
 import "./Skills.scss";
 
-class Skills extends Component {
-  getColumnsCount = () => (window.innerWidth < 420 ? 2 : 3);
+const getColumnsCount = () => (window.innerWidth < 420 ? 2 : 3);
 
+class Skills extends Component {
   state = {
-    columnsCount: this.getColumnsCount(),
-    skills: [],
+    columnsCount: getColumnsCount(),
   };
 
   componentDidMount() {
-    axios.get("/skills.json").then(({ data }) => {
-      this.setState({ skills: data });
-    });
+    this.props.onFetchSkills();
 
     window.addEventListener("resize", () => {
-      this.setState({ columnsCount: this.getColumnsCount() });
+      this.setState({ columnsCount: getColumnsCount() });
     });
   }
 
   render() {
     return (
       <Section className="Skills" heading="My skills" id="skills">
-        {(this.state.skills.length && (
+        {(this.props.skills.length && (
           <Fade bottom delay={100} duration={500}>
-            <List items={this.state.skills} columns={this.state.columnsCount} />
+            <List items={this.props.skills} columns={this.state.columnsCount} />
           </Fade>
         )) || <Spinner />}
       </Section>
@@ -39,4 +38,16 @@ class Skills extends Component {
   }
 }
 
-export default Skills;
+const mapStateToProps = (state) => {
+  return {
+    skills: state.skills.skills,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFetchSkills: () => dispatch(fetchSkills()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Skills);

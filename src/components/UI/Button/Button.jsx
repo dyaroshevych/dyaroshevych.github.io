@@ -2,7 +2,12 @@ import React from "react";
 
 import "./Button.scss";
 
-const Button = ({ color = "white", shape = "round", text }) => {
+const Button = ({
+  color = "white",
+  shape = "round",
+  text,
+  click = () => {},
+}) => {
   const buttonClasses = ["Button"];
 
   if (color) {
@@ -13,7 +18,11 @@ const Button = ({ color = "white", shape = "round", text }) => {
     buttonClasses.push(`Button___${shape}`);
   }
 
-  return <button className={buttonClasses.join(" ")}>{text}</button>;
+  return (
+    <button className={buttonClasses.join(" ")} onClick={click}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

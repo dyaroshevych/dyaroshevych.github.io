@@ -1,22 +1,11 @@
 @import "../../../index.scss";
 
-.Field {
+.FormField {
   max-width: 100%;
 
-  &_label {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-  }
-
-  &_input {
-    &:valid {
-      border-color: #078307;
-    }
-
-    &:not(:valid) {
-      border-color: #c63030;
-    }
+  &_error {
+    font-size: 14px;
+    color: #c63030;
   }
 
   &_input,
@@ -61,6 +50,10 @@
     &:placeholder-shown {
       border-color: #929292;
     }
+  }
+
+  &_input[data-invalid="true"] {
+    border-color: #c63030;
   }
 
   &_textarea {

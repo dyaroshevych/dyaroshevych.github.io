@@ -6,12 +6,14 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import projectsReducer from "./store/reducers/projects";
 import skillsReducer from "./store/reducers/skills";
+import messageReducer from "./store/reducers/message";
 
 import App from "./App";
 
 const reducer = combineReducers({
   projects: projectsReducer,
   skills: skillsReducer,
+  message: messageReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

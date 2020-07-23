@@ -65,7 +65,7 @@ const ProjectPreview = ({
 
 const mapStateToProps = (state) => {
   return {
-    skills: state.skills,
+    skills: state.skills.skills,
   };
 };
 
