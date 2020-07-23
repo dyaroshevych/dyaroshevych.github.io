@@ -1,7 +1,7 @@
 import {
   FETCH_SKILLS_START,
   FETCH_SKILLS_SUCCESS,
-  FETCH_PROJECTS_FAIL,
+  FETCH_SKILLS_FAIL,
 } from "../actions/actionTypes";
 import { updateObject } from "../utility";
 
@@ -41,7 +41,7 @@ const reducer = (state = initialState, action) => {
       return fetchSkillsStart(state);
     case FETCH_SKILLS_SUCCESS:
       return fetchSkillsSuccess(state, action);
-    case FETCH_PROJECTS_FAIL:
+    case FETCH_SKILLS_FAIL:
       return fetchSkillsFail(state);
     default:
       return state;

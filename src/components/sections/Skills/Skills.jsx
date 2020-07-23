@@ -26,6 +26,14 @@ class Skills extends Component {
   }
 
   render() {
+    if (this.props.error) {
+      return (
+        <Section className="Skills" heading="My skills" id="skills">
+          {this.props.error && <p>Network error.</p>}
+        </Section>
+      );
+    }
+
     return (
       <Section className="Skills" heading="My skills" id="skills">
         {(this.props.skills.length && (
@@ -41,6 +49,7 @@ class Skills extends Component {
 const mapStateToProps = (state) => {
   return {
     skills: state.skills.skills,
+    error: state.skills.error,
   };
 };
 
