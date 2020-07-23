@@ -48,8 +48,9 @@ class Skills extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    skills: state.skills.skills,
+    skills: [...state.skills.skills],
     error: state.skills.error,
+    loading: state.skills.loading,
   };
 };
 

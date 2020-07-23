@@ -67,7 +67,7 @@ class ProjectFull extends Component {
 const mapStateToProps = (state) => {
   return {
     projectIdx: state.projects.openedProjectIdx,
-    skills: state.skills.skills,
+    skills: [...state.skills.skills],
   };
 };
 

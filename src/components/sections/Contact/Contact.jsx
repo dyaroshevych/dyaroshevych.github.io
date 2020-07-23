@@ -63,12 +63,6 @@ class Contact extends Component {
     },
   };
 
-  componentDidMount() {
-    axios.get("/contact.json").then(({ data }) => {
-      // this.setState({ formConfig: data });
-    });
-  }
-
   clearForm = () => {
     const formConfig = {};
 
