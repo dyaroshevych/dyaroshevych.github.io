@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Fade } from "react-reveal";
-import axios from "axios";
+import axios from "axios.js";
 
 import { connect } from "react-redux";
 import { setMessage } from "store/actions";
