@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
 
-import Button from "../../../../UI/Button/Button";
+import Button from "components/UI/Button/Button";
 
 import "./Links.scss";
 

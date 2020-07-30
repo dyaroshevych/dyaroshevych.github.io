@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaPlus, FaLink } from "react-icons/fa";
 
 import { connect } from "react-redux";
-import { openProject } from "../../../../store/actions";
+import { openProject } from "store/actions";
 
 import "./ProjectPreview.scss";
 

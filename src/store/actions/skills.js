@@ -3,7 +3,7 @@ import {
   FETCH_SKILLS_SUCCESS,
   FETCH_SKILLS_FAIL,
 } from "./actionTypes";
-import axios from "../../axios";
+import axios from "axios.js";
 
 const fetchSkillsStart = () => {
   return {

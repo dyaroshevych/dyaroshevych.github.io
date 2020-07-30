@@ -3,8 +3,8 @@ import {
   FETCH_PROJECTS_FAIL,
   OPEN_PROJECT,
   CLOSE_PROJECT,
-} from "../actions/actionTypes";
-import { updateObject } from "../utility";
+} from "store/actions/actionTypes";
+import { updateObject } from "store/utility";
 
 const initialState = {
   projects: [],

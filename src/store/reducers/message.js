@@ -1,5 +1,5 @@
-import { SET_MESSAGE, RESET_MESSAGE } from "../actions/actionTypes";
-import { updateObject } from "../utility";
+import { SET_MESSAGE, RESET_MESSAGE } from "store/actions/actionTypes";
+import { updateObject } from "store/utility";
 
 const initialState = {
   type: null,

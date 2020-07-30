@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-reveal";
 
-import Section from "../../../hoc/Section/Section";
+import Section from "hoc/Section/Section";
 
 const About = () => (
   <Section className="About" heading="About me" id="about">

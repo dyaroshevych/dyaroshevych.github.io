@@ -3,13 +3,13 @@ import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
 
-import Wrapper from "../../../hoc/Wrapper/Wrapper";
-import About from "../About/About";
-import Skills from "../Skills/Skills";
-import Contact from "../Contact/Contact";
-import Projects from "../Projects/Projects";
-import ProjectFull from "../Projects/ProjectFull/ProjectFull";
-import InfoBox from "../../UI/InfoBox/InfoBox";
+import Wrapper from "hoc/Wrapper/Wrapper";
+import About from "components/sections/About/About";
+import Skills from "components/sections/Skills/Skills";
+import Contact from "components/sections/Contact/Contact";
+import Projects from "components/sections/Projects/Projects";
+import ProjectFull from "components/sections/Projects/ProjectFull/ProjectFull";
+import InfoBox from "components/UI/InfoBox/InfoBox";
 
 import "./Layout.scss";
 

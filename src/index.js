@@ -4,11 +4,11 @@ import ReactDOM from "react-dom";
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import projectsReducer from "./store/reducers/projects";
-import skillsReducer from "./store/reducers/skills";
-import messageReducer from "./store/reducers/message";
+import projectsReducer from "store/reducers/projects";
+import skillsReducer from "store/reducers/skills";
+import messageReducer from "store/reducers/message";
 
-import App from "./App";
+import App from "App";
 
 const reducer = combineReducers({
   projects: projectsReducer,

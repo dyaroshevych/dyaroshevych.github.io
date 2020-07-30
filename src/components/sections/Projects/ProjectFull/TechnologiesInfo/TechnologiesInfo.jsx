@@ -3,8 +3,8 @@ import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
 
-import Image from "../../../../UI/Image/Image";
-import List from "../../../../UI/List/List";
+import Image from "components/UI/Image/Image";
+import List from "components/UI/List/List";
 
 import "./TechnologiesInfo.scss";
 

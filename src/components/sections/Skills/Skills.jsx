@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
-import { fetchSkills } from "../../../store/actions";
+import { fetchSkills } from "store/actions";
 
-import Section from "../../../hoc/Section/Section";
-import List from "../../UI/List/List";
-import Spinner from "../../UI/Spinner/Spinner";
+import Section from "hoc/Section/Section";
+import List from "components/UI/List/List";
+import Spinner from "components/UI/Spinner/Spinner";
 
 import "./Skills.scss";
 

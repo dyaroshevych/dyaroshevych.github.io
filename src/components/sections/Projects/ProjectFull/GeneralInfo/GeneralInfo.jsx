@@ -3,7 +3,7 @@ import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
 
-import Image from "../../../../UI/Image/Image";
+import Image from "components/UI/Image/Image";
 
 const GeneralInfo = ({ name, description, imageUrlPrefix, imgCaptions }) => (
   <>

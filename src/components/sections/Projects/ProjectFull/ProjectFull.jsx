@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Slide } from "react-reveal";
-import axios from "../../../../axios";
+import axios from "axios";
 
 import { connect } from "react-redux";
 
-import Wrapper from "../../../../hoc/Wrapper/Wrapper";
+import Wrapper from "hoc/Wrapper/Wrapper";
 import Menu from "./Menu/Menu";
 import Links from "./Links/Links";
 import GeneralInfo from "./GeneralInfo/GeneralInfo";

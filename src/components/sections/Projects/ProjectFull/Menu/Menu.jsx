@@ -2,9 +2,9 @@ import React from "react";
 import { FaTimes, FaExternalLinkAlt } from "react-icons/fa";
 
 import { connect } from "react-redux";
-import { closeProject } from "../../../../../store/actions";
+import { closeProject } from "store/actions";
 
-import Wrapper from "../../../../../hoc/Wrapper/Wrapper";
+import Wrapper from "hoc/Wrapper/Wrapper";
 
 import "./Menu.scss";
 

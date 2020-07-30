@@ -4,7 +4,7 @@ import {
   OPEN_PROJECT,
   CLOSE_PROJECT,
 } from "./actionTypes";
-import axios from "../../axios";
+import axios from "axios.js";
 
 const fetchProjectsSuccess = (projects) => {
   return {

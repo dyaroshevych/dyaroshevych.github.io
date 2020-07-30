@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Fade } from "react-reveal";
 
 import { connect } from "react-redux";
-import { fetchProjects, openProject } from "../../../store/actions";
+import { fetchProjects, openProject } from "store/actions";
 
 import ProjectPreview from "./ProjectPreview/ProjectPreview";
-import Spinner from "../../UI/Spinner/Spinner";
+import Spinner from "components/UI/Spinner/Spinner";
 
 import "./Projects.scss";
 

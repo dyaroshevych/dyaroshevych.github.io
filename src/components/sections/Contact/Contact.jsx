@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Fade } from "react-reveal";
-import axios from "../../../axios";
+import axios from "axios";
 
 import { connect } from "react-redux";
-import { setMessage } from "../../../store/actions";
+import { setMessage } from "store/actions";
 
-import Section from "../../../hoc/Section/Section";
-import Button from "../../UI/Button/Button";
-import FormField from "../../UI/FormField/FormField";
-import Spinner from "../../UI/Spinner/Spinner";
+import Section from "hoc/Section/Section";
+import Button from "components/UI/Button/Button";
+import FormField from "components/UI/FormField/FormField";
+import Spinner from "components/UI/Spinner/Spinner";
 
 import "./Contact.scss";
 

@@ -2,8 +2,8 @@ import {
   FETCH_SKILLS_START,
   FETCH_SKILLS_SUCCESS,
   FETCH_SKILLS_FAIL,
-} from "../actions/actionTypes";
-import { updateObject } from "../utility";
+} from "store/actions/actionTypes";
+import { updateObject } from "store/utility";
 
 const initialState = {
   skills: [],

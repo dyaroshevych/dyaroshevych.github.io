@@ -3,11 +3,11 @@ import { Link } from "react-scroll";
 import { Fade } from "react-reveal";
 import { FaGithub, FaEnvelope, FaLinkedinIn } from "react-icons/fa";
 
-import Wrapper from "../../../hoc/Wrapper/Wrapper";
-import Button from "../../UI/Button/Button";
-import IconLink from "../../UI/IconLink/IconLink";
+import Wrapper from "hoc/Wrapper/Wrapper";
+import Button from "components/UI/Button/Button";
+import IconLink from "components/UI/IconLink/IconLink";
 
-import { ReactComponent as Logo } from "../../../assets/img/logo.svg";
+import { ReactComponent as Logo } from "assets/img/logo.svg";
 
 import "./Header.scss";
 
