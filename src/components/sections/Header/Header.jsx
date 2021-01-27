@@ -40,7 +40,7 @@ const Header = () => {
           <h1>Dmitrii Yaroshevych</h1>
         </Fade>
         <Fade bottom delay={100} duration={500}>
-          <h5>Frontend Developer</h5>
+          <h5>Software Developer</h5>
         </Fade>
         <ul className="Header_socialList">
           {links.map(({ component, link, label }, idx) => (
